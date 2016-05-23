@@ -3,7 +3,7 @@
 class UserAction ():
     def  __init__(self):
         print "user action class!"
-        self.filepath = "/home/wangyu/tianchi/data/mars_tianchi_user_actions.csv"
+        self.filepath = "/home/sxy/tianchi/data/mars_tianchi_user_actions.csv"
 
     def mapDayToNumber(self, day):
         count_for_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -12,8 +12,8 @@ class UserAction ():
         for i in range(0, month - 1):
             number += count_for_month[i]
         number += int(day[6: 8])
-        #print number
-        return number
+        print number
+        #return number
 
     def buildSongPlaytimesDic(self):
         song_playtimes_dic = dict()
@@ -21,7 +21,7 @@ class UserAction ():
         for line in file:
             strings = line.split(',')
             if len(strings) != 5:
-                print "tirty record!"
+                print "dirty record!"
                 continue
             song_id = strings[1]
             action_type = strings[3]
@@ -40,5 +40,5 @@ class UserAction ():
 
 if __name__ == '__main__':
     useraction = UserAction()
-    useraction.buildSongPlaytimesDic()
-    #useraction.mapDayToNumber('20150815')
+    # useraction.buildSongPlaytimesDic()
+    useraction.mapDayToNumber('20150815')

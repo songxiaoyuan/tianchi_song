@@ -3,7 +3,7 @@
 class Song():
     def __init__(self):
         print "song class"
-        self.filepath = "/home/wangyu/tianchi/data/mars_tianchi_songs.csv"
+        self.filepath = "/home/sxy/tianchi/data/mars_tianchi_songs.csv"
 
     def buildArtistSongsDic(self):
         artist_songs_dic = dict()
